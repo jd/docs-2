@@ -4,18 +4,17 @@ import { BiBadgeCheck, BiSolidCoinStack, BiRuler } from 'react-icons/bi';
 import {
   BsBook, BsCommand, BsGear, BsLightbulb, BsPlugin, BsRocket, BsStack,
 } from 'react-icons/bs';
-import { FaJenkins, FaShieldAlt } from 'react-icons/fa';
+import { FaShieldAlt } from 'react-icons/fa';
 import {
   FaCirclePlay, FaRegLightbulb, FaGear, FaTrafficLight, FaSnowflake, FaMoneyBill1,
 } from 'react-icons/fa6';
 import { GoGitMerge } from 'react-icons/go';
 import { LiaShareAltSolid } from 'react-icons/lia';
 import {
-  SiDatadog, SiSnyk, SiDependabot, SiTeamcity,
+  SiDatadog, SiSnyk, SiDependabot, SiTeamcity, SiGithubactions, SiJenkins,
 } from 'react-icons/si';
 import { SlRefresh } from 'react-icons/sl';
 import { TbCrystalBall, TbPackages } from 'react-icons/tb';
-import { VscGithubAction } from 'react-icons/vsc';
 
 import { v5 } from 'uuid';
 
@@ -58,7 +57,7 @@ const navItems: NavItem[] = [
           { title: 'Delete Head Branch', path: '/workflow/actions/delete_head_branch' },
           { title: 'Dismiss Reviews', path: '/workflow/actions/dismiss_reviews' },
           { title: 'Edit', path: '/workflow/actions/edit' },
-          { title: 'GitHub Actions', path: '/workflow/actions/github_actions' },
+          { title: 'GitHub Actions', path: '/workflow/actions/github_actions', icon: <SiGithubactions /> },
           { title: 'Label', path: '/workflow/actions/label' },
           { title: 'Merge', path: '/workflow/actions/merge' },
           { title: 'Post Check', path: '/workflow/actions/post_check' },
@@ -121,8 +120,8 @@ const navItems: NavItem[] = [
     icon: <BsPlugin />,
     path: '/integrations',
     children: [
-      { title: 'GitHub Actions', path: '/integrations/gha', icon: <VscGithubAction /> },
-      { title: 'Jenkins', path: '/integrations/jenkins', icon: <FaJenkins /> },
+      { title: 'GitHub Actions', path: '/integrations/gha', icon: <SiGithubactions /> },
+      { title: 'Jenkins', path: '/integrations/jenkins', icon: <SiJenkins /> },
       { title: 'TeamCity', path: '/integrations/teamcity', icon: <SiTeamcity /> },
       { title: 'Datadog', path: '/integrations/datadog', icon: <SiDatadog /> },
       { title: 'Graphite', path: '/integrations/graphite', icon: <BsStack /> },
