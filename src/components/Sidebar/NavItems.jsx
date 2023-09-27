@@ -155,6 +155,7 @@ export default function NavItems({ items, depth = 0 }) {
             depth={depth}
             as={GatsbyLink}
             to={path}
+            leftIcon={item.icon}
           >
             {item.title}
           </NavButton>

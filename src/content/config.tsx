@@ -1,7 +1,14 @@
 import React from 'react';
+import { BiBadgeCheck } from 'react-icons/bi';
 import {
   BsBook, BsCommand, BsGear, BsLightbulb, BsPlugin, BsRocket, BsStack,
 } from 'react-icons/bs';
+import { FaJenkins, FaShieldAlt } from 'react-icons/fa';
+import { FaMoneyBill1 } from 'react-icons/fa6';
+import {
+  SiDatadog, SiSnyk, SiDependabot, SiTeamcity,
+} from 'react-icons/si';
+import { VscGithubAction } from 'react-icons/vsc';
 
 import { v5 } from 'uuid';
 
@@ -107,13 +114,13 @@ const navItems: NavItem[] = [
     icon: <BsPlugin />,
     path: '/integrations',
     children: [
-      { title: 'GitHub Actions', path: '/integrations/gha' },
-      { title: 'Dependabot', path: '/integrations/dependabot' },
-      { title: 'Jenkins', path: '/integrations/jenkins' },
-      { title: 'TeamCity', path: '/integrations/teamcity' },
-      { title: 'Datadog', path: '/integrations/datadog' },
-      { title: 'Graphite', path: '/integrations/graphite' },
-      { title: 'Snyk', path: '/integrations/snyk' },
+      { title: 'GitHub Actions', path: '/integrations/gha', icon: <VscGithubAction /> },
+      { title: 'Jenkins', path: '/integrations/jenkins', icon: <FaJenkins /> },
+      { title: 'TeamCity', path: '/integrations/teamcity', icon: <SiTeamcity /> },
+      { title: 'Datadog', path: '/integrations/datadog', icon: <SiDatadog /> },
+      { title: 'Graphite', path: '/integrations/graphite', icon: <BsStack /> },
+      { title: 'Dependabot', path: '/integrations/dependabot', icon: <SiDependabot /> },
+      { title: 'Snyk', path: '/integrations/snyk', icon: <SiSnyk /> },
     ],
   },
   {
@@ -121,9 +128,9 @@ const navItems: NavItem[] = [
     icon: <BsStack />,
     path: '/stacked_prs',
   },
-  { title: 'Security', path: '/security' },
-  { title: 'Badge', path: '/badge' },
-  { title: 'Billing', path: '/billing' },
+  { title: 'Security', path: '/security', icon: <FaShieldAlt /> },
+  { title: 'Badge', path: '/badge', icon: <BiBadgeCheck /> },
+  { title: 'Billing', path: '/billing', icon: <FaMoneyBill1 /> },
 ];
 
 function addUuidOnGroups(items: NavItem[]): NavItem[] {
