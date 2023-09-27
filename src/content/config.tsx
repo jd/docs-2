@@ -1,13 +1,20 @@
 import React from 'react';
-import { BiBadgeCheck } from 'react-icons/bi';
+import { AiOutlinePartition } from 'react-icons/ai';
+import { BiBadgeCheck, BiSolidCoinStack, BiRuler } from 'react-icons/bi';
 import {
   BsBook, BsCommand, BsGear, BsLightbulb, BsPlugin, BsRocket, BsStack,
 } from 'react-icons/bs';
 import { FaJenkins, FaShieldAlt } from 'react-icons/fa';
-import { FaMoneyBill1 } from 'react-icons/fa6';
+import {
+  FaCirclePlay, FaRegLightbulb, FaGear, FaTrafficLight, FaSnowflake, FaMoneyBill1,
+} from 'react-icons/fa6';
+import { GoGitMerge } from 'react-icons/go';
+import { LiaShareAltSolid } from 'react-icons/lia';
 import {
   SiDatadog, SiSnyk, SiDependabot, SiTeamcity,
 } from 'react-icons/si';
+import { SlRefresh } from 'react-icons/sl';
+import { TbCrystalBall, TbPackages } from 'react-icons/tb';
 import { VscGithubAction } from 'react-icons/vsc';
 
 import { v5 } from 'uuid';
@@ -24,18 +31,18 @@ export type NavItem = {
 
 const navItems: NavItem[] = [
   { title: 'Home', path: '/' },
-  { title: 'Getting Started', path: '/getting-started' },
+  { title: 'Getting Started', path: '/getting-started', icon: <FaCirclePlay /> },
   {
     title: 'Workflow Automation',
     icon: <BsGear />,
     path: '/workflow',
     children: [
-      { title: 'Writing Your First Rule', path: '/workflow/writing-your-first-rule' },
+      { title: 'Writing Your First Rule', path: '/workflow/writing-your-first-rule', icon: <BiRuler /> },
       {
         title: 'Use Cases',
         icon: <BsLightbulb />,
         children: [
-          { title: 'Automatic Merge', path: '/workflow/automerge' },
+          { title: 'Automatic Merge', path: '/workflow/automerge', icon: <GoGitMerge /> },
         ],
       },
       {
@@ -69,15 +76,15 @@ const navItems: NavItem[] = [
     title: 'Merge Queue',
     icon: <MergeQueueIcon />,
     children: [
-      { title: 'Introduction', path: '/merge-queue/intro' },
-      { title: 'Setup', path: '/merge-queue/setup' },
-      { title: 'Lifecycle', path: '/merge-queue/lifecycle' },
-      { title: 'Priority', path: '/merge-queue/priority' },
-      { title: 'Freeze', path: '/merge-queue/freeze' },
-      { title: 'Multiple Queues', path: '/merge-queue/multi' },
-      { title: 'Speculative Checks', path: '/merge-queue/speculative-checks' },
-      { title: 'Batches', path: '/merge-queue/batches' },
-      { title: 'Partitions', path: '/merge-queue/partitions' },
+      { title: 'Introduction', path: '/merge-queue/intro', icon: <FaRegLightbulb /> },
+      { title: 'Setup', path: '/merge-queue/setup', icon: <FaGear /> },
+      { title: 'Lifecycle', path: '/merge-queue/lifecycle', icon: <SlRefresh /> },
+      { title: 'Priority', path: '/merge-queue/priority', icon: <FaTrafficLight /> },
+      { title: 'Freeze', path: '/merge-queue/freeze', icon: <FaSnowflake /> },
+      { title: 'Multiple Queues', path: '/merge-queue/multi', icon: <BiSolidCoinStack /> },
+      { title: 'Speculative Checks', path: '/merge-queue/speculative-checks', icon: <TbCrystalBall /> },
+      { title: 'Batches', path: '/merge-queue/batches', icon: <TbPackages /> },
+      { title: 'Partitions', path: '/merge-queue/partitions', icon: <AiOutlinePartition /> },
     ],
   },
   {
@@ -102,7 +109,7 @@ const navItems: NavItem[] = [
     icon: <BsBook />,
     children: [
       { title: 'Configuration File', path: '/configuration/file-format' },
-      { title: 'Sharing Configuration', path: '/configuration/sharing' },
+      { title: 'Sharing Configuration', path: '/configuration/sharing', icon: <LiaShareAltSolid /> },
       { title: 'Conditions', path: '/configuration/conditions' },
       { title: 'Data Types', path: '/configuration/data-types' },
       { title: 'API Usage', path: '/api-usage' },

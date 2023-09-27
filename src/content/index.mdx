@@ -14,12 +14,12 @@ import { BiBadgeCheck } from 'react-icons/bi';
 import {SiSlack, SiGithub, SiTwitter, SiYoutube, SiLinkedin} from 'react-icons/si';
 import {SlRefresh} from 'react-icons/sl';
 import {GoGitMerge, GoGitCommit} from 'react-icons/go';
-import {BsPlugin, BsStack, BsDoorOpen, BsLightningCharge, BsListTask, BsRobot, BsChatText, BsType} from 'react-icons/bs';
+import {BsRocket, BsPlugin, BsStack, BsDoorOpen, BsLightningCharge, BsListTask, BsRobot, BsChatText, BsType} from 'react-icons/bs';
 import {BiSolidCoinStack, BiRuler} from 'react-icons/bi';
 import {TbCrystalBall, TbPackages} from 'react-icons/tb';
 import {FaCirclePlay, FaRegLightbulb, FaGear, FaTrafficLight, FaSnowflake, FaMoneyBill1} from 'react-icons/fa6';
 import {FaShieldAlt} from 'react-icons/fa';
-import {AiOutlineStop, AiOutlinePartition, AiOutlineInteraction} from 'react-icons/ai';
+import {AiOutlinePartition} from 'react-icons/ai';
 import {LiaShareAltSolid} from 'react-icons/lia';
 
 Welcome to Mergify Documentation. 
@@ -46,7 +46,7 @@ Automate your GitHub pull requests workflow.
     title="Actions"
     description="A complete list of actions you can use with Mergify."
     path="/workflow/actions"
-    icon={<AiOutlineInteraction/>}
+    icon={<BsRocket />}
   />
 </DocsetGrid>
 
@@ -98,9 +98,6 @@ and adapt it to your own needs.
     path="/workflow/pull-requests-conflicts"
     icon={<BsLightningCharge/>}
   />
-</DocsetGrid>
-
-<DocsetGrid>
   <Docset
     title="Using Commit Message Template"
     description="Make sure your Git history is properly formatted with commit message template."
@@ -138,9 +135,6 @@ and adapt it to your own needs.
     path="/merge-queue/setup"
     icon={<FaGear/>}
   />
-</DocsetGrid>
-
-<DocsetGrid>
   <Docset
     title="Pull Request Lifecycle"
     description="Understand the lifecycle of a pull request before and once it enters a merge queue."
@@ -159,9 +153,6 @@ and adapt it to your own needs.
     path="/merge-queue/freeze"
     icon={<FaSnowflake/>}
   />
-</DocsetGrid>
-
-<DocsetGrid>
   <Docset
     title="Using Multiple Queues"
     description="Learn how to implement multiple merge queues and route your pull requests."
@@ -180,9 +171,6 @@ and adapt it to your own needs.
     path="/merge-queue/batches"
     icon={<TbPackages/>}
   />
-</DocsetGrid>
-
-<DocsetGrid>
   <Docset
     title="Partitions"
     description="Optimize your merge queue for monorepos."
