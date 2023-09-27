@@ -22,8 +22,6 @@ scenarios such as requeueing and unqueueing PRs.
 
 ## Adding a Pull Request to the Merge Queue
 
-{/* FIXME: add link to workflow automation */}
-
 A pull request can be added to the merge queue either manually or through a
 pull request rule using Mergify's workflow automation. Here's an overview of
 the process:
@@ -31,10 +29,10 @@ the process:
 1. **Manual addition:** A pull request can be manually added to the merge queue
    using the [`@mergifyio queue` command](/commands/queue).
 
-{/* FIXME: add link to workflow automation below */}
-2. **Automated addition:** A pull request can also be automatically added to
-   the merge queue based on the rules defined in the `pull_request_rules`
-   section of your [Mergify configuration file](/configuration/file-format).
+2. **Automated addition:** A pull request can also be [automatically added to
+   the merge queue](/workflow/automerge#automatic-merge-and-queues) based on
+   the rules defined in the `pull_request_rules` section of your [Mergify
+   configuration file](/configuration/file-format#pull-request-rules).
 
 3. **Meeting queue conditions:** Before a pull request can be added to the
    merge queue, it must meet certain conditions, specified under
@@ -79,11 +77,10 @@ strict digraph {
 The lifecycle of a pull request in the merge queue begins as soon as it enters
 the queue.
 
-{/* FIXME: add link to priority rules */}
-
 1. **Position in the queue:** The pull request assumes its position in the
    queue based on the order in which it entered. As mentioned in the previous
-   section, the order may be influenced by any defined priority rules.
+   section, the order may be influenced by any defined [priority
+   rules](priority).
 
 2. **Waiting for its turn:** The pull request will wait in the queue until it
    is its turn to be processed. The processing of pull requests in the queue is
@@ -124,10 +121,8 @@ request with the latest changes from the base branch before attempting to
 merge. This is done to ensure that the pull request is always up-to-date with
 the base branch and that the merging will not introduce any conflicts. Mergify
 uses the `update` action to achieve this by default, merging the base branch in
-the pull request. You can change this behavior using the `update_method
-option`.
-
-{/* FIXME add link to queue configuration for update method */}
+the pull request. You can change this behavior using [the `update_method`
+option](/configuration/file-format#queue-rules).
 
 If the pull request cannot be updated due to conflicts that can't be resolved
 automatically, it will be removed from the queue, and you will be notified to
@@ -155,12 +150,10 @@ ways:
    gets removed from the pull request, Mergify will automatically remove the
    pull request from the queue.
 
-{/* FIXME add link to commands */}
-
-2. **Use of the `unqueue` command:** A pull request can be manually removed
-   from the queue by issuing the `@mergifyio unqueue` command. This is
-   particularly useful in situations where you need to stop a pull request from
-   being merged, such as when a critical issue is discovered.
+2. **Use of the [`unqueue` command](/commands/unqueue):** A pull request can be
+   manually removed from the queue by issuing the `@mergifyio unqueue` command.
+   This is particularly useful in situations where you need to stop a pull
+   request from being merged, such as when a critical issue is discovered.
 
 Please note, a pull request removed from the queue with the `unqueue` command
 will not rejoin the queue automatically — it will need to be manually re-added
