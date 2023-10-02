@@ -31,6 +31,12 @@ const plugins = [
       icon: 'src/assets/favicon.svg'
     }
   },
+  {
+      resolve: `gatsby-plugin-plausible`,
+      options: {
+        domain: `docs.mergify.com`,
+      },
+  },
   'gatsby-plugin-offline',
   {
     resolve: 'gatsby-plugin-webfonts',
