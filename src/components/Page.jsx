@@ -49,7 +49,6 @@ import ExpansionPanel, {
 import { TOTAL_HEADER_HEIGHT } from './Header';
 import InlineCode from './InlineCode';
 import PageLayout, { usePageLayoutProps } from './PageLayout';
-import Pagination from './Pagination';
 import RelativeLink, { ButtonLink } from './RelativeLink';
 
 import TableOfContents from './TableOfContents';
@@ -178,7 +177,6 @@ export default function Page({
 
   const { frontmatter, headings } = childMdx || childMarkdownRemark;
   const { title, description, toc } = frontmatter;
-  const { navItems } = pageContext;
 
   const pageProps = usePageLayoutProps({
     pageContext,
@@ -234,7 +232,6 @@ export default function Page({
             {description}
           </chakra.h2>
         )}
-        pagination={<Pagination navItems={navItems} />}
         aside={
             toc !== false ? (
               // hide the table of contents on the home page
