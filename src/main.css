@@ -23,3 +23,8 @@ figcaption {
 .sl-flex-wrap-wrap {
   flex-wrap: wrap;
 }
+
+/* created and used by gatsby-remark-embed-video */
+iframe.embedVideo-iframe {
+    margin: auto;
+}

@@ -15,6 +15,7 @@ dotenv.populate(
 
 const gatsbyRemarkPlugins = [
   '@fec/remark-a11y-emoji/gatsby',
+  'gatsby-remark-embed-video',
   {
     resolve: 'gatsby-remark-copy-linked-files',
     options: {
