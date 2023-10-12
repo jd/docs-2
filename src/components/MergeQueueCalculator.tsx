@@ -36,11 +36,12 @@ function MergeQueueCalculator() {
   const calculate = () => {
     const calculatedBatchSize = Math.ceil(100 / ciUsagePct);
     const ciTimeWithFailure = ciTime * (1 + ((100 - successRatio) / 100));
+
     let calculatedSpeculativeChecks = (
       prPerHour / (60 / ciTimeWithFailure) / calculatedBatchSize
     );
 
-    if (batchSize === 1) calculatedSpeculativeChecks *= ciUsagePct / 100;
+    if (calculatedBatchSize === 1) calculatedSpeculativeChecks *= ciUsagePct / 100;
 
     calculatedSpeculativeChecks = Math.ceil(calculatedSpeculativeChecks);
 
