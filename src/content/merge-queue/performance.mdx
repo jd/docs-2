@@ -161,6 +161,29 @@ process.
     optimized as possible.
 </Info>
 
+## Optimizing Merge Queue Time with Efficient CI Runs
+
+To ensure your merge queue processes efficiently, it's essential that your
+Continuous Integration (CI) system runs as quickly as possible. One way to
+achieve this is by meticulously selecting the tests you run, ensuring that only
+necessary tests are executed. Remember, every minute saved in CI time can have
+a cascading positive effect on your overall merge efficiency.
+
+A strategic approach to further optimize CI runtime is the [**Two-Step
+CI**](two-step) method. This approach differentiates between:
+
+1. **Preliminary Tests**: These are the tests run immediately when a PR is
+created or updated. They're designed to be quick yet effective, ensuring only
+quality PRs enter the merge queue.
+
+2. **Comprehensive Tests**: These tests are more exhaustive and are run just
+before merging, ensuring the final quality of the code.
+
+By splitting your tests in this manner, you ensure that the merge queue is not
+held up by lengthy CI processes for every minor PR update. Instead, the more
+extensive tests are reserved for when PRs are about to be merged, providing a
+balance between speed and code quality.
+
 ### Concluding Thoughts
 
 Mergify provides a range of configurations to tailor your CI budget and merge
