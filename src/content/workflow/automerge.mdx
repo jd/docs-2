@@ -4,6 +4,7 @@ description: Learn how to automate your pull request merges with Mergify.
 ---
 
 import { Info } from '../../components/Alerts/Info';
+import { Danger } from '../../components/Alerts/Danger';
 
 Mergify's automatic merging is a powerful feature designed to help maintainers
 save time and keep their repositories up-to-date efficiently. It automates the
@@ -81,6 +82,48 @@ steps:
 
 With these settings, Mergify will automatically merge eligible pull requests
 based on the conditions you've specified.
+
+## Validating All Status Checks
+
+A common condition is to require that "every status check (CI) passes" —
+especially before executing the [merge](/workflow/actions/merge) or adding a
+pull request to a [queue](/merge-queue/lifecycle).
+
+<Danger>
+There is no such thing as "every status check" in GitHub.
+</Danger>
+
+Here's why:
+
+1. Each pull request can have its own custom list of status checks. This means
+   the list of "status check" **does not exist** and is not common to all pull
+   requests.
+
+2. On creation, or when a new commit is pushed, a pull request has **no**
+   status check.
+
+3. A status check might not be reported by a service (CI) (e.g., because it's
+   broken) and therefore be absent.
+
+Those three facts make it **mandatory** to write explicitly the checks that are
+expected for your condition to be valid. Therefore you must list explicitly
+every status check that is expected, e.g.:
+
+```yaml
+conditions:
+  - check-success = build: Windows
+  - check-success = build: Linux
+```
+
+**Do not** use conditions such as:
+
+- `#check-failure=0`, because this will be true as soon as the pull request is
+  created and before any service report its status (see point 2. above).
+
+- `check-success~=build` while expecting this to wait for "all" status checks
+  that have `build` in their name (see point 1. and 2.above).
+
+Such conditions won't do what you want them to do.
 
 ## Restricting Automatic Merges
 
