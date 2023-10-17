@@ -15,6 +15,7 @@ import {
 import { FiType } from 'react-icons/fi';
 import { GoGitMerge, GoCodeReview } from 'react-icons/go';
 import { LiaShareAltSolid } from 'react-icons/lia';
+import { MdMonitorHeart } from 'react-icons/md';
 import {
   SiSlack, SiDatadog, SiSnyk, SiDependabot, SiTeamcity,
   SiGithubactions, SiJenkins, SiCircleci, SiBuildkite,
@@ -95,6 +96,7 @@ const navItems: NavItem[] = [
       { title: 'Partitions', path: '/merge-queue/partitions', icon: <AiOutlinePartition /> },
       { title: 'Performance', path: '/merge-queue/performance', icon: <SlSpeedometer /> },
       { title: 'Deployment', path: '/merge-queue/deploy', icon: <AiOutlineDeploymentUnit /> },
+      { title: 'Monitoring', path: '/merge-queue/monitoring', icon: <MdMonitorHeart /> },
     ],
   },
   {
