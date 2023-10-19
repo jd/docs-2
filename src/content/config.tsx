@@ -19,7 +19,7 @@ import { LiaShareAltSolid } from 'react-icons/lia';
 import { MdMonitorHeart } from 'react-icons/md';
 import {
   SiSlack, SiDatadog, SiSnyk, SiDependabot, SiTeamcity,
-  SiGithubactions, SiJenkins, SiCircleci, SiBuildkite,
+  SiGithubactions, SiJenkins, SiCircleci, SiBuildkite, SiGitlab,
 } from 'react-icons/si';
 import { SlRefresh, SlSpeedometer } from 'react-icons/sl';
 import { TbCrystalBall, TbPackages, TbBike } from 'react-icons/tb';
@@ -140,6 +140,7 @@ const navItems: NavItem[] = [
       { title: 'Jenkins', path: '/integrations/jenkins', icon: <SiJenkins /> },
       { title: 'TeamCity', path: '/integrations/teamcity', icon: <SiTeamcity /> },
       { title: 'BuildKite', path: '/integrations/buildkite', icon: <SiBuildkite /> },
+      { title: 'GitLab', path: '/integrations/gitlab', icon: <SiGitlab /> },
       { title: 'Datadog', path: '/integrations/datadog', icon: <SiDatadog /> },
       { title: 'Slack', path: '/integrations/slack', icon: <SiSlack /> },
       { title: 'Graphite', path: '/integrations/graphite', icon: <BsStack /> },
