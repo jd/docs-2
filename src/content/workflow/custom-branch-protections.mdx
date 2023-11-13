@@ -73,7 +73,7 @@ pull_request_rules:
     conditions:
       # At least one modified files in the docs/ directory
       - files ~= ^docs/
-      # No other files are modifeid#
+      # No other files are modified
       # (note the - prefix to negate the condition), meaning:
       # if not (any files matches something else than docs/)
       - -files ~= ^(?!docs/)
@@ -112,7 +112,7 @@ pull_request_rules:
       merge:
 ```
 
-This allows pull request to be automatically merged with conditions that are
+This allows pull requests to be automatically merged with conditions that are
 finer-grained that GitHub generic branch protections.
 
 ### Scheduling Merges
