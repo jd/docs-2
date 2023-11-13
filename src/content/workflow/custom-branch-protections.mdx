@@ -61,7 +61,7 @@ author is [Dependabot](https://github.com/dependabot) and has one approval, or
 if the PR has two approvals.
 
 This is more flexible than GitHub protected branch which only offers a fixed
-number of approval for any pull request.
+number of approvals for any pull request.
 
 ### Documentation PRs
 
@@ -71,7 +71,7 @@ You could auto-merge pull requests only modifying documentation.
 pull_request_rules:
   - name: Documentation PRs
     conditions:
-      # At least one modified files in the docs/ directory
+      # At least one modified file in the docs/ directory
       - files ~= ^docs/
       # No other files are modified
       # (note the - prefix to negate the condition), meaning:
@@ -113,7 +113,7 @@ pull_request_rules:
 ```
 
 This allows pull requests to be automatically merged with conditions that are
-finer-grained that GitHub generic branch protections.
+finer-grained than GitHub generic branch protections.
 
 ### Scheduling Merges
 
