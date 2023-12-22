@@ -383,7 +383,7 @@
         {
           "key": "queue-frozen",
           "type": "boolean",
-          "description": "Whether the pull request is a queue that is frozen."
+          "description": "Whether the pull request is in a queue that is frozen."
         },
         {
           "key": "queue-freeze-reason",
