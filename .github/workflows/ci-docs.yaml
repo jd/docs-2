@@ -1,6 +1,5 @@
 name: Documentation Preview
-permissions:
-  contents: write
+permissions: read-all
 
 on:
   # NOTE(sileht): safe as long as we don't run/build anything from the pull request
@@ -31,7 +30,7 @@ jobs:
             gh api -X PATCH "/repos/Mergifyio/docs/git/$DEST_REF" -f "sha=${HEAD_SHA}" -F force=true
           else
             echo "Creating $DEST_REF"
-            gh api -X POST "/repos/Mergifyio/docs/git" -f "sha=${HEAD_SHA}" -f "refs=$DEST_REF"
+            gh api -X POST "/repos/Mergifyio/docs/git/refs" -f "sha=${HEAD_SHA}" -f "ref=$DEST_REF"
           fi
   delete-preview-doc:
     runs-on: ubuntu-22.04
