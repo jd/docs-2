@@ -19,7 +19,7 @@ import { IoIosRemoveCircleOutline } from 'react-icons/io';
 import { LiaShareAltSolid } from 'react-icons/lia';
 import { MdMonitorHeart, MdScheduleSend } from 'react-icons/md';
 import {
-  SiSlack, SiDatadog, SiSnyk, SiDependabot, SiTeamcity,
+  SiSlack, SiDatadog, SiSnyk, SiDependabot, SiRenovatebot, SiTeamcity,
   SiGithubactions, SiJenkins, SiCircleci, SiBuildkite, SiGitlab,
 } from 'react-icons/si';
 import { SlRefresh, SlSpeedometer } from 'react-icons/sl';
@@ -155,6 +155,7 @@ const navItems: NavItem[] = [
       { title: 'Graphite', path: '/integrations/graphite', icon: <BsStack /> },
       { title: 'Rush', path: '/integrations/rush', icon: <TbBike /> },
       { title: 'Dependabot', path: '/integrations/dependabot', icon: <SiDependabot /> },
+      { title: 'Renovate', path: '/integrations/renovate', icon: <SiRenovatebot /> },
       { title: 'Snyk', path: '/integrations/snyk', icon: <SiSnyk /> },
     ],
   },
