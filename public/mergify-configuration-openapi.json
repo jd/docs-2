@@ -754,6 +754,7 @@
       "description": "Dequeue code for when a pull request has been disembarked from the merge queue.",
       "type": "string",
       "enum": [
+        "none",
         "pr-merged",
         "pr-dequeued",
         "checks-timeout",
