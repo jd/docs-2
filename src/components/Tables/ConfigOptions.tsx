@@ -1,5 +1,5 @@
 import React from 'react';
-import configSchema from '../../../public/mergify-configuration-openapi.json';
+import configSchema from '../../../public/mergify-configuration-schema.json';
 import { renderMarkdown } from './utils';
 
 // FIXME: move this to JSON schema?

@@ -1,4 +1,4 @@
-import configSchema from '../../../public/mergify-configuration-openapi.json';
+import configSchema from '../../../public/mergify-configuration-schema.json';
 import { getValueType } from './ConfigOptions';
 
 import { renderMarkdown } from './utils';

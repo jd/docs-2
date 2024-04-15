@@ -1,5 +1,5 @@
 import { visit } from 'unist-util-visit';
-import configSchema from '../public/mergify-configuration-openapi.json';
+import configSchema from '../public/mergify-configuration-schema.json';
 import { toString } from 'hast-util-to-string';
 import algoliasearch from 'algoliasearch';
 import type * as unified from 'unified';
